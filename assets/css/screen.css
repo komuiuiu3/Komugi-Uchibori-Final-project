@@ -533,8 +533,6 @@ a:hover {
 }
 a img {
   border: none;
-  /* 古いブラウザ向けにborder: 0; を追加することもありますが、
-     border: none; が現代の推奨です。 */
 }
 
 img {
@@ -942,77 +940,51 @@ header .logo img {
   color: var(--accent-color);
 }
 
-/* ---------------------------------------------------------------------- */
-/* フッタータイトルリンクのスタイル調整 */
-/* ---------------------------------------------------------------------- */
-/* footer__title クラスの元のスタイル（font-sizeがここで設定されているはず） */
-/* 必要であれば、この部分のfont-sizeが希望通りか確認してください */
-.footer__title {
-  /* 例: font-size: 1.5em; */ /* ← ここで文字の大きさが設定されている */
-  /* color: #FFFFFF; */ /* 元々ここで白などの色が設定されている可能性あり */
-  /* その他のスタイル */
-}
-
-/* aboutlink クラスを持つリンクにスタイルを適用 */
-/* これが、文字サイズを維持しつつ、色を黄色に強制する主要なルールです。 */
 .footer__title .aboutlink {
-  font-size: inherit; /* ← 親要素（.footer__title）から文字の大きさを継承する */
-  color: #FFD700 !important; /* ← 常に黄色にするため !important を追加 */
-  text-decoration: none !important; /* 下線を削除するため !important を追加 */
+  font-size: inherit;
+  color: #FFD700 !important;
+  text-decoration: none !important;
 }
 
-/* ホバー時のスタイル：マウスカーソルが乗っても色が変わらないように */
 .footer__title .aboutlink:hover {
-  color: #FFD700 !important; /* ホバー時も同じ黄色を維持 */
-  text-decoration: none !important; /* ホバー時も下線をつけない */
-  cursor: pointer; /* クリック可能であることを示す */
+  color: #FFD700 !important;
+  text-decoration: none !important;
+  cursor: pointer;
 }
 
-/* アクティブ時（クリックされている瞬間）のスタイル */
 .footer__title .aboutlink:active {
-  color: #FFD700 !important; /* アクティブ時も同じ黄色を維持 */
+  color: #FFD700 !important;
   text-decoration: none !important;
 }
 
-/* 訪問済みリンクのスタイル */
 .footer__title .aboutlink:visited {
-  color: #FFD700 !important; /* 訪問済みでも同じ黄色を維持 */
+  color: #FFD700 !important;
   text-decoration: none !important;
 }
 
-/* ---------------------------------------------------------------------- */
-/* フッターリンクのスタイル調整 */
-/* ---------------------------------------------------------------------- */
-/* フッターの「Home」リンクの色を黄色に設定 (最重要) */
-/* class="footer-title-link" を持つリンクに優先的に適用 */
-.footer__menu ul li a.aboutlink { /* 例: 親要素セレクタを具体的にすることで優先度を上げる */
-  color: #D6C822 !important; /* ← 常に黄色にするため !important を追加 */
-  text-decoration: none !important; /* 下線を削除するため !important を追加 */
+.footer__menu ul li a.aboutlink {
+  color: #D6C822 !important;
+  text-decoration: none !important;
 }
 
-/* ホバー時のスタイル：マウスカーソルが乗っても色が変わらないように */
 .footer__menu ul li a.aboutlink:hover {
-  color: #D6C822 !important; /* ホバー時も同じ黄色を維持 */
-  text-decoration: none !important; /* ホバー時も下線をつけない */
-  cursor: pointer; /* クリック可能であることを示す */
+  color: #D6C822 !important;
+  text-decoration: none !important;
+  cursor: pointer;
 }
 
-/* アクティブ時（クリックされている瞬間）のスタイル */
 .footer__menu ul li a.aboutlink:active {
-  color: #D6C822 !important; /* アクティブ時も同じ黄色を維持 */
+  color: #D6C822 !important;
   text-decoration: none !important;
 }
 
-/* 訪問済みリンクのスタイル */
 .footer__menu ul li a.aboutlink:visited {
-  color: #D6C822 !important; /* 訪問済みでも同じ黄色を維持 */
+  color: #D6C822 !important;
   text-decoration: none !important;
 }
 
-/* もし .active クラスが原因で白になっている場合、それも上書きする */
-/* これは、もし .active クラスがリンクの色を白にしている場合に効果的です。 */
 li.active a.aboutlink {
-  color: #D6C822 !important; /* activeな状態でも黄色を強制 */
+  color: #D6C822 !important;
 }
 
 /* ============================
@@ -1035,8 +1007,7 @@ li.active a.aboutlink {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 4vh;
-  margin-left: -40px;
+  height: 50vh;
 }
 @media screen and (min-width: 768px) {
   .mv-home__image {
@@ -1046,7 +1017,7 @@ li.active a.aboutlink {
 }
 .mv-home__text {
   flex: 1;
-  padding: 35px;
+  padding: 35px 35px 60px clamp(2.1875rem, 0.0284090909rem + 10.7954545455vw, 8.125rem);
 }
 .mv-home__text h1 {
   font-family: "Cormorant Infant", serif;
@@ -1119,7 +1090,6 @@ li.active a.aboutlink {
 }
 .staff__item img {
   width: 100px;
-  height: fit-content;
 }
 .staff__item p {
   font-family: "Cormorant Infant", serif;
@@ -1667,7 +1637,7 @@ li.active a.aboutlink {
 }
 @media screen and (min-width: 768px) {
   .contact__form {
-    padding: 120px 20px 120px 50px;
+    padding: 120px 20px 120px clamp(3.125rem, 1.5340909091rem + 7.9545454545vw, 7.5rem);
   }
 }
 .contact__form h2 {
@@ -1772,7 +1742,7 @@ select {
   background-repeat: no-repeat;
   background-position: right 0.75em center;
   background-size: 1em;
-  background-color: #f0f0f0; /* 例：薄いグレー */
+  background-color: #f0f0f0;
   color: black;
 }
 
