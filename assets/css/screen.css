@@ -1047,19 +1047,16 @@ li.active a.aboutlink {
 .mv-home__text {
   flex: 1;
   padding: 35px;
-  margin-right: -110px;
 }
 .mv-home__text h1 {
   font-family: "Cormorant Infant", serif;
   font-size: clamp(1.875rem, 1.4204545455rem + 2.2727272727vw, 3.125rem);
   line-height: 1.25;
   margin-bottom: 20px;
-  margin-left: 130px;
   color: var(--primary-color);
 }
 .mv-home__text p {
   font-size: clamp(1rem, 0.7954545455rem + 1.0227272727vw, 1.5625rem);
-  margin-left: 130px;
 }
 
 .samples {
@@ -1666,9 +1663,7 @@ li.active a.aboutlink {
 .contact__form {
   box-sizing: border-box;
   color: #fff;
-  padding-top: 185px;
-  margin-left: 90px;
-  margin-right: -50px;
+  padding: 60px 20px;
 }
 @media screen and (min-width: 768px) {
   .contact__form {
